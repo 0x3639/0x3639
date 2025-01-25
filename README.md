@@ -1,16 +1,23 @@
-## Hi there 👋
+# Hi there 👋
 
-<!--
-**0x3639/0x3639** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I’m an intern passionate about **Zenon Network**. Here’s what I’m working on:
 
-Here are some ideas to get you started:
+- 🌱 Exploring and building on [Zenon Network](https://zenon.network)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+## Connect with me 🌐
+- X: [@0x3639](https://twitter.com/0x3639)
+- Official Zenon Community: [Telegram](https://t.me/zenonofficial)
+- Matrix: [@deeZNNutz](https://matrix.to/#/@deeznnutz:zenon.chat)
+- Explore: [Learn Zenon](https://my.znn.link/@LearnZenon)
+
+---
+
+## My Stats 📊
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=0x3639&show_icons=true&theme=radical)
+
+---
+
+## Follow Me on X 🐦
+![X Follow](https://img.shields.io/twitter/follow/0x3639?style=social)

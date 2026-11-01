@@ -1,4 +1,5 @@
-# Renders the profile stats card on a GitHub runner and commits it to stats/.
+# Renders the profile stats card and contribution calendar on a GitHub runner
+# and commits them to stats/.
 # Replaces the public github-readme-stats Vercel instance, which is rate limited
 # and frequently renders an error card instead of the stats.
 name: Render stats
@@ -48,7 +49,7 @@ jobs:
         working-directory: .grs
         run: npm ci --omit=dev --ignore-scripts
 
-      - name: Render stats card
+      - name: Render stats cards
         env:
           STATS_USERNAME: ${{ github.repository_owner }}
           GRS_DIR: .grs
@@ -68,5 +69,5 @@ jobs:
             echo "Stats unchanged, nothing to commit."
             exit 0
           fi
-          git commit -m "chore: update stats card"
+          git commit -m "chore: update stats cards"
           git push origin "HEAD:refs/heads/${{ github.ref_name }}"

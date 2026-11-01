@@ -53,10 +53,10 @@ jobs:
           STATS_USERNAME: ${{ github.repository_owner }}
           GRS_DIR: .grs
           OUT_DIR: stats
-          # github-readme-stats reads its GitHub token from PAT_1. The workflow
-          # token covers public data. To also count private contributions, add a
-          # classic personal access token with read:user as the METRICS_TOKEN secret.
-          PAT_1: ${{ secrets.METRICS_TOKEN || github.token }}
+          # The workflow token covers public data. To also count private
+          # contributions, add a classic personal access token with read:user
+          # as the METRICS_TOKEN secret.
+          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN || github.token }}
         run: node .github/scripts/render-stats.mjs
 
       - name: Commit and push if changed

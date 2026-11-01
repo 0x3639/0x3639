@@ -15,7 +15,7 @@ I’m an intern passionate about **Zenon Network**. Here’s what I’m working 
 ---
 
 ## My Stats 📊
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=0x3639&show_icons=true&theme=radical)
+![GitHub Stats](./stats/github-stats.svg)
 
 ---
 

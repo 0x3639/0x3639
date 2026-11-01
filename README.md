@@ -17,6 +17,8 @@ I’m an intern passionate about **Zenon Network**. Here’s what I’m working 
 ## My Stats 📊
 ![GitHub Stats](./stats/github-stats.svg)
 
+![Contribution calendar](./stats/contributions.svg)
+
 ---
 
 ## Follow Me on X 🐦

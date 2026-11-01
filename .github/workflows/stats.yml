@@ -1,0 +1,72 @@
+# Renders the profile stats card on a GitHub runner and commits it to stats/.
+# Replaces the public github-readme-stats Vercel instance, which is rate limited
+# and frequently renders an error card instead of the stats.
+name: Render stats
+
+on:
+  schedule:
+    - cron: "17 6 * * *" # daily, 06:17 UTC
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/stats.yml
+      - .github/scripts/render-stats.mjs
+
+permissions:
+  contents: write
+
+concurrency:
+  group: render-stats-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # anuraghazra/github-readme-stats, master as of 2026-06-30. Bump deliberately.
+  GRS_REF: 54a7985aeefda00d5eadb55b80c17c7f976c37d2
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out profile repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Check out github-readme-stats
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: anuraghazra/github-readme-stats
+          ref: ${{ env.GRS_REF }}
+          path: .grs
+
+      - name: Set up Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: .grs/package-lock.json
+
+      - name: Install github-readme-stats dependencies
+        working-directory: .grs
+        run: npm ci --omit=dev --ignore-scripts
+
+      - name: Render stats card
+        env:
+          STATS_USERNAME: ${{ github.repository_owner }}
+          GRS_DIR: .grs
+          OUT_DIR: stats
+          # github-readme-stats reads its GitHub token from PAT_1. The workflow
+          # token covers public data. To also count private contributions, add a
+          # classic personal access token with read:user as the METRICS_TOKEN secret.
+          PAT_1: ${{ secrets.METRICS_TOKEN || github.token }}
+        run: node .github/scripts/render-stats.mjs
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add stats
+          if git diff --staged --quiet; then
+            echo "Stats unchanged, nothing to commit."
+            exit 0
+          fi
+          git commit -m "chore: update stats card"
+          git push origin "HEAD:refs/heads/${{ github.ref_name }}"

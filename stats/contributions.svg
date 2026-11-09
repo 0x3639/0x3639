@@ -1,12 +1,12 @@
 <svg width="819" height="205" viewBox="0 0 819 205" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="titleId descId">
   <title id="titleId">0x3639's contribution calendar</title>
-  <desc id="descId">2,580 contributions in the last year</desc>
+  <desc id="descId">2,591 contributions in the last year</desc>
   <style>
     .title { font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #fe428e; }
     .label { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #a9fef7; }
   </style>
   <rect x="0.5" y="0.5" rx="4.5" width="818" height="204" stroke="#e4e2e2" fill="#141321" stroke-opacity="1" />
-  <text class="title" x="25" y="35">2,580 contributions in the last year</text>
+  <text class="title" x="25" y="35">2,591 contributions in the last year</text>
   <g>
       <text class="label" x="55" y="62">Nov</text>
       <text class="label" x="111" y="62">Dec</text>
@@ -388,7 +388,8 @@
       <rect x="769" y="126" width="11" height="11" rx="2" fill="#1f1e33"><title>0 on 2026-11-05</title></rect>
       <rect x="769" y="140" width="11" height="11" rx="2" fill="#0e4429"><title>13 on 2026-11-06</title></rect>
       <rect x="769" y="154" width="11" height="11" rx="2" fill="#0e4429"><title>21 on 2026-11-07</title></rect>
-      <rect x="783" y="70" width="11" height="11" rx="2" fill="#1f1e33"><title>0 on 2026-11-08</title></rect>
+      <rect x="783" y="70" width="11" height="11" rx="2" fill="#0e4429"><title>17 on 2026-11-08</title></rect>
+      <rect x="783" y="84" width="11" height="11" rx="2" fill="#1f1e33"><title>0 on 2026-11-09</title></rect>
       
       <text class="label" x="678" y="190" text-anchor="end">Less</text>
       <rect x="684" y="181" width="11" height="11" rx="2" fill="#1f1e33" />

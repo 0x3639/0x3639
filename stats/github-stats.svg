@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">0x3639's GitHub Stats, Rank: A-</title>
-        <desc id="descId">Total Stars Earned: 9, Total Commits  (last year) : 2053, Total PRs: 456, Total Issues: 182, Contributed to (last year): 23</desc>
+        <desc id="descId">Total Stars Earned: 9, Total Commits  (last year) : 2092, Total PRs: 458, Total Issues: 182, Contributed to (last year): 23</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 75.57418298625909;
+        stroke-dashoffset: 75.55661697344037;
       }
     }
   
@@ -192,7 +192,7 @@
         x="219.01"
         y="12.5"
         data-testid="prs"
-      >456</text>
+      >458</text>
     </g>
   </g><g transform="translate(0, 75)">
     <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)">
